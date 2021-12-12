@@ -1,0 +1,54 @@
+@mixin clearfix{
+    &::after{
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+@mixin abscenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+
+// media query maneger
+/*
+0 - 600px:        phone
+600 - 900px:      tablet portrait
+900 - 1200px:     tablet lendscape
+[1200 - 1800px:]  is whare are our normal style apply
+1800 +            big desktop
+*/
+
+// @mixin respond-phone{
+//     @media (max-width:600px) {@content};
+// }
+
+/*
+$breackpoint arguement choices:
+- phone
+- tap-port
+- tap-lend
+- big-desktop
+*/
+// @mixin respond($breackpoint){
+//  @if $breackpoint == phone{
+//      @media (max-width:600px) {@content}; /* 600px  */
+//  }
+
+//  @if $breackpoint == tab-port{
+//     @media (max-width:900px) {@content};   /* 900px  */
+//  }
+
+//  @if $breackpoint == tab-lend{
+//     @media (max-width:1200) {@content};     /* 1200px  */
+//  }
+
+//  @if $breackpoint == big-desktop{
+//     @media (max-width:1800px) {@content};   /* 1800px  */
+//  }
+
+// }

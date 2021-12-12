@@ -1,0 +1,98 @@
+/* button lnik */
+
+.btn{
+    &,
+    &:link,
+    &:visited{
+        text-transform: uppercase;
+        text-decoration: none;
+        display: inline-block;
+        border-radius: 10rem;
+        transition: .3s;
+        position: relative;
+        padding: 1.5rem 4rem;
+        font-size: $default-font-size;
+
+        //change for button
+        border: none;
+        cursor: pointer;
+    }
+
+    &:hover{
+        transform: translateY(-.3rem);
+        box-shadow: 0 1rem 2rem rgba($color-black,.2);
+
+        &::after{
+            transform: scaleX(1.7) scaleY(1.5);
+            opacity: 0;
+        }
+    }
+    &:active,
+    &:focus{
+        outline: none;
+        transform: translateY(-.1rem);
+        box-shadow: 0 .5rem 1rem rgba($color-black,.2);
+    }
+
+    &--white {
+        background-color: $color-white;
+        color: $color-gray;
+        animation: moveInbottom 1s ease-out;
+
+        &::after{
+            background: #fff;
+        }
+    }
+
+    &--green{
+        background: $color-primary;
+        color: $color-white;
+
+        &::after{
+            background: $color-primary;
+        }
+    }
+
+    &::after{
+        content: "";
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border-radius: 100px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: .4s;
+    }
+}
+
+.btn--text{
+    &:link,
+    &:visited{
+        font-size: $default-font-size;
+        color: $color-primary;
+        display: inline-block;
+        text-decoration: none;
+        border-bottom: .1rem solid $color-primary;
+        text-transform: capitalize;
+        padding: .3rem;
+        transition: .3s;
+    }
+
+    &:hover{
+        background-color: $color-primary;
+        color: #fff;
+        border-bottom: .1rem soild transparent;
+        box-shadow: 0 1rem 2rem rgba($color-black,.15);
+        transform: translateY(-.2rem);
+    }
+
+    &:active{
+        box-shadow: 0 .5rem 1rem rgba($color-black,.15);
+        transform: translateY(0);
+
+    }
+}
+
+
